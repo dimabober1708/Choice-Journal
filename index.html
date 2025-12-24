@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="description" content="Choice Journal — Support & Privacy Policy" />
+  <title>Choice Journal — Support & Privacy Policy</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #070A13;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --text: rgba(255,255,255,0.90);
+      --muted: rgba(255,255,255,0.65);
+      --faint: rgba(255,255,255,0.45);
+      --line: rgba(255,255,255,0.12);
+
+      --gold: #D9B16E;
+      --gold2:#F4E2B7;
+      --accent:#7DD3FC;
+
+      --radius: 18px;
+      --shadow: 0 16px 50px rgba(0,0,0,0.45);
+      --max: 1060px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(900px 650px at 20% 10%, rgba(217,177,110,0.16), transparent 60%),
+        radial-gradient(800px 600px at 85% 0%, rgba(125,211,252,0.10), transparent 55%),
+        radial-gradient(950px 650px at 70% 95%, rgba(217,177,110,0.08), transparent 55%),
+        linear-gradient(180deg, #070A13 0%, #050712 100%);
+      overflow-x:hidden;
+    }
+
+    a{ color: var(--gold2); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 80px;
+    }
+
+    /* Top bar */
+    .top{
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(7,10,19,0.65);
+      border-bottom: 1px solid var(--line);
+    }
+    .top-inner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 220px;
+    }
+    .mark{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background:
+        radial-gradient(12px 12px at 30% 30%, rgba(244,226,183,0.9), transparent 60%),
+        linear-gradient(135deg, rgba(217,177,110,0.95), rgba(125,211,252,0.35));
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .brand h1{
+      margin:0;
+      font-family: Fraunces, serif;
+      font-size: 18px;
+      letter-spacing: 0.2px;
+      line-height: 1.15;
+    }
+    .brand .sub{
+      display:block;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: Inter, sans-serif;
+      margin-top: 2px;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      transition: transform .12s ease, background .12s ease;
+      text-decoration:none;
+    }
+    .pill:hover{
+      background: rgba(255,255,255,0.07);
+      transform: translateY(-1px);
+      text-decoration:none;
+    }
+    .pill.secondary{
+      color: var(--muted);
+      font-weight: 600;
+      background: transparent;
+    }
+
+    /* Hero */
+    .hero{
+      padding: 34px 0 18px;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .card{
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-main{
+      padding: 22px 22px 20px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-main:before{
+      content:"";
+      position:absolute;
+      inset:-60px -80px auto auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(244,226,183,0.55), rgba(217,177,110,0.14) 55%, transparent 70%);
+      filter: blur(2px);
+      pointer-events:none;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(217,177,110,0.28);
+      background: rgba(217,177,110,0.08);
+      color: var(--gold2);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+    .hero h2{
+      margin: 14px 0 10px;
+      font-family: Fraunces, serif;
+      font-weight: 650;
+      font-size: 34px;
+      line-height: 1.08;
+      letter-spacing: 0.2px;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+      max-width: 66ch;
+    }
+    .quote{
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+    .quote strong{ color: rgba(255,255,255,0.92); }
+
+    .hero-side{
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 12px;
+    }
+    .meta{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      padding: 14px 14px 12px;
+    }
+    .meta .label{
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin-bottom: 6px;
+    }
+    .meta .value{
+      font-size: 13px;
+      color: rgba(255,255,255,0.86);
+      line-height: 1.55;
+      word-break: break-word;
+    }
+    .meta a{ color: var(--gold2); }
+
+    /* Sections */
+    .sections{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    section.card{
+      padding: 20px 22px;
+    }
+    section h3{
+      margin: 0 0 10px;
+      font-family: Fraunces, serif;
+      font-weight: 650;
+      font-size: 22px;
+      letter-spacing: 0.2px;
+    }
+    .section-sub{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items:start;
+    }
+    .box{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      padding: 14px 14px 12px;
+    }
+    .box h4{
+      margin: 0 0 8px;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+      color: rgba(255,255,255,0.92);
+      text-transform: uppercase;
+    }
+    ul{
+      margin: 0;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    li{ margin: 6px 0; }
+    .muted{ color: var(--muted); }
+
+    details{
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+    details summary{
+      cursor:pointer;
+      font-weight: 700;
+      font-size: 14px;
+      color: rgba(255,255,255,0.88);
+      list-style: none;
+    }
+    details summary::-webkit-details-marker{ display:none; }
+    details p{
+      margin: 10px 0 0;
+      color: rgba(255,255,255,0.74);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .footer{
+      margin-top: 18px;
+      padding: 18px 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .brand{ min-width: unset; }
+    }
+    @media (max-width: 760px){
+      .grid-2{ grid-template-columns: 1fr; }
+      .hero h2{ font-size: 30px; }
+      nav{ justify-content:flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="top-inner">
+      <div class="brand" aria-label="Choice Journal">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>Choice Journal <span class="sub">Support & Privacy Policy</span></h1>
+        </div>
+      </div>
+
+      <nav aria-label="Primary navigation">
+        <a class="pill" href="#support">Support</a>
+        <a class="pill" href="#faq">FAQ</a>
+        <a class="pill" href="#privacy">Privacy Policy</a>
+        <a class="pill secondary" href="mailto:dimabober1708@icloud.com">Email</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <header class="hero" id="top">
+      <div class="hero-grid">
+        <div class="card hero-main">
+          <span class="kicker">Reflect • Learn • Improve</span>
+          <h2>Every financial choice shapes your future.</h2>
+          <p>
+            Choice Journal helps you capture meaningful decisions — not just <em>what</em> you chose,
+            but <em>why</em> you chose it, how you felt, and what actually happened.
+            This isn’t about budgeting spreadsheets. It’s about patterns, self-awareness, and building wisdom over time.
+          </p>
+          <div class="quote" role="note">
+            <strong>Reminder:</strong> Choice Journal is designed for personal reflection and education.
+            It does <strong>not</strong> provide financial, legal, or investment advice.
+          </div>
+        </div>
+
+        <aside class="card hero-side" aria-label="App details">
+          <div class="meta">
+            <div class="label">App</div>
+            <div class="value"><strong>Choice Journal</strong></div>
+          </div>
+          <div class="meta">
+            <div class="label">Developer</div>
+            <div class="value">Dmytro Bobrovnyk</div>
+          </div>
+          <div class="meta">
+            <div class="label">Contact</div>
+            <div class="value">
+              <a href="mailto:dimabober1708@icloud.com">dimabober1708@icloud.com</a>
+            </div>
+          </div>
+          <div class="meta">
+            <div class="label">Last updated</div>
+            <div class="value">December 24, 2025</div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <div class="sections">
+      <!-- SUPPORT -->
+      <section class="card" id="support" aria-label="Support">
+        <h3>Support</h3>
+        <p class="section-sub">
+          Need help with Choice Journal? Email us and we’ll do our best to respond promptly.
+          To speed things up, include your device model, iOS version, and a short description of what happened.
+        </p>
+
+        <div class="grid-2">
+          <div class="box">
+            <h4>Contact</h4>
+            <ul>
+              <li>Email: <a href="mailto:dimabober1708@icloud.com">dimabober1708@icloud.com</a></li>
+              <li>Developer: Dmytro Bobrovnyk</li>
+              <li>App: Choice Journal</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4>Troubleshooting</h4>
+            <ul>
+              <li>Restart the app and ensure you are on the latest version.</li>
+              <li>Restart your device (simple, but often effective).</li>
+              <li>If syncing is enabled, confirm you are signed into iCloud and have a stable connection.</li>
+              <li>If an entry appears missing, check filters and search.</li>
+            </ul>
+          </div>
+        </div>
+
+        <details id="faq">
+          <summary>FAQ — Does Choice Journal give financial advice?</summary>
+          <p>
+            No. Choice Journal is a personal journaling and reflection tool. It helps you document decisions and outcomes,
+            but it does not provide financial, investment, tax, or legal advice.
+          </p>
+        </details>
+
+        <details>
+          <summary>FAQ — How do refunds and subscriptions work?</summary>
+          <p>
+            Purchases made through the App Store are handled by Apple. For refunds or subscription management,
+            please use your Apple ID settings or Apple’s official support channels.
+          </p>
+        </details>
+
+        <details>
+          <summary>FAQ — How do I report a bug?</summary>
+          <p>
+            Email us with: (1) what you expected to happen, (2) what happened instead, (3) steps to reproduce,
+            and (4) screenshots if possible. Include your iOS version and device model.
+          </p>
+        </details>
+      </section>
+
+      <!-- PRIVACY POLICY -->
+      <section class="card" id="privacy" aria-label="Privacy Policy">
+        <h3>Privacy Policy</h3>
+        <p class="section-sub">
+          Your trust matters. This policy explains what information Choice Journal may process, why, and what choices you have.
+          If you have questions, contact us at <a href="mailto:dimabober1708@icloud.com">dimabober1708@icloud.com</a>.
+        </p>
+
+        <div class="grid-2">
+          <div class="box">
+            <h4>In plain English</h4>
+            <ul>
+              <li>Your journal is for you. We don’t sell personal data.</li>
+              <li>We aim to collect the minimum needed to run and improve the app.</li>
+              <li>You can request help or deletion guidance by email.</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h4>Effective date</h4>
+            <ul>
+              <li>Last updated: <strong>December 24, 2025</strong></li>
+              <li>Applies to: Choice Journal (iOS)</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          1. Information We Process
+        </h4>
+        <ul>
+          <li><strong>Journal content you create:</strong> entries, notes, tags, and reflections (the “Content”).</li>
+          <li><strong>Support communications:</strong> when you email us, we receive your email address and the information you choose to include.</li>
+          <li class="muted"><strong>Optional diagnostics (only if enabled/used in the app):</strong> basic crash logs or performance data to improve stability. This is typically collected in an aggregated or pseudonymous form.</li>
+        </ul>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          2. How We Use Information
+        </h4>
+        <ul>
+          <li>To provide core functionality (creating, viewing, and managing your journal entries).</li>
+          <li>To respond to support requests and troubleshoot issues.</li>
+          <li class="muted">To improve app reliability and user experience (e.g., crash diagnostics), where applicable.</li>
+        </ul>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          3. Data Storage & Sync (If Applicable)
+        </h4>
+        <ul>
+          <li>Your Content may be stored locally on your device.</li>
+          <li class="muted">If you enable iCloud sync (or similar Apple services), your Content may be stored and synchronized through Apple’s infrastructure under your Apple ID settings.</li>
+        </ul>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          4. Sharing & Third Parties
+        </h4>
+        <ul>
+          <li><strong>We do not sell</strong> your personal data.</li>
+          <li>We share information only when necessary to provide the service (for example, Apple services you choose to use) or to comply with legal obligations.</li>
+          <li class="muted">If optional crash/analytics tools are used, they receive limited technical data strictly to help diagnose issues and improve stability.</li>
+        </ul>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          5. Security
+        </h4>
+        <ul>
+          <li>We apply reasonable safeguards to protect information in transit and at rest where applicable.</li>
+          <li>No system is 100% secure; please use device protections such as a passcode/Face ID.</li>
+        </ul>
+
+        <h4 style="margin-top:16px; color:rgba(255,255,255,0.92); text-transform:uppercase; letter-spacing:.2px; font-size:13px;">
+          6. Your Choices & Rights
+        </h4>
+        <ul>
+          <li>You can edit or delete entries within the app.</li>
+          <li>If you contact us, you may request assistance related to your data by email.</li>
+          <li class="muted">If syncing is enabled, you can manage iCloud settings in iO
